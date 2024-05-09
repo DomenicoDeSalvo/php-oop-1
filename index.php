@@ -52,7 +52,7 @@ class Genre {
         }
     }
 }
-
+//I FILM VENGONO CREATI DIRETTAMENTE DENTRO UN ARRAY
 $movies = array(
     new Production ('La Febbra','Italiano', 10, new Genre ('Drammatico',2004)),
     new Production ('Avatar 2', 'Inglese', 8, new Genre ('Fantascienza',2022)),
@@ -77,9 +77,15 @@ $movies = array(
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container">
-            <div class="row row-cols-3">
-                <?php
+        <!-- HEADER -->
+        <?php
+            include __DIR__ . '/partials/templates/header.php';
+        ?>
+        <!-- MAIN -->
+        <main class="py-4">
+            <div class="container">
+                <div class="row row-cols-3">
+                    <?php
                     foreach ($movies as $movie) {
                         ?>
                         <div class="col p-2">
@@ -107,10 +113,15 @@ $movies = array(
                                 </div>
                             </div>
                         </div>
-                    <?php
+                        <?php
                     };
-                ?>
+                    ?>
+                </div>
             </div>
-        </div>
+        </main>
+        <!-- FOOTER -->
+        <?php
+            include __DIR__ . '/partials/templates/footer.php';
+        ?>
     </body>
 </html>
