@@ -5,7 +5,11 @@ class Production{
     public $language;
     public $rate;
 
-   
+    function __construct($_title, $_language, $rate ) {
+        $this => $title = $_title;
+        $this => $language = $_language;
+        $this => $rate = $_rate;
+    }
 }
 ?>
 
