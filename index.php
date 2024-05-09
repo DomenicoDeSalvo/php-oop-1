@@ -1,6 +1,6 @@
 <!-- PHP -->
 <?php
-//CLASSE
+//CLASSE PRODUCTION
 class Production{
     public $title;
     public $language;
@@ -27,6 +27,25 @@ class Production{
             $this -> rate = intval($new_rate);
         }
     }
+},
+
+//CLASSE GENRE
+class Genre {
+    public $name;
+    public $plot;
+    //COSTRUTTORE
+    function __construct(string $_name, string $_plot){
+        $this -> setName($_name);
+        $this -> setPlot($_plot);   
+    }
+    //ACQUISIZIONE NOME GENERE
+    public function setNae($new_name){
+        $this -> name = $new_name;
+    }
+    //ACQUISIZIONE TRAMA
+    public function setPlot($new_plot){
+        $this -> plot = $new_plot;
+    }
 }
 
 $movie1 = new Production ('La Febbra','Italiano',10);
@@ -45,6 +64,6 @@ var_dump($movie2);
         <title>PHP OOP</title>
     </head>
     <body>
-        
+    
     </body>
 </html>
