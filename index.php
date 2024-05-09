@@ -5,11 +5,13 @@ class Production{
     public $title;
     public $language;
     public $rate;
+    public $genre;
     //COSTRUTTORE
-    function __construct(string $_title, string $_language, int $_rate ) {
+    function __construct(string $_title, string $_language, int $_rate, Genre $_genre) {
         $this -> setTitle($_title);
         $this -> setLanguage($_language);
         $this -> setRate($_rate);
+        $this -> genre = $_genre;
     }
     //ACQUISIZIONE TITOLO
     public function setTitle(string $new_title) : void{
@@ -27,30 +29,32 @@ class Production{
             $this -> rate = intval($new_rate);
         }
     }
-},
+}
 
 //CLASSE GENRE
 class Genre {
     public $name;
-    public $plot;
+    public $year;
     //COSTRUTTORE
-    function __construct(string $_name, string $_plot){
+    function __construct(string $_name, int $_year){
         $this -> setName($_name);
-        $this -> setPlot($_plot);   
+        $this -> setYear($_year);   
     }
     //ACQUISIZIONE NOME GENERE
-    public function setNae($new_name){
+    public function setName(string $new_name) : void{
         $this -> name = $new_name;
     }
-    //ACQUISIZIONE TRAMA
-    public function setPlot($new_plot){
-        $this -> plot = $new_plot;
+    //ACQUISIZIONE ANNO
+    public function setYear(int $new_year) : void{
+        if(is_numeric($new_year)){
+            $this -> year = intval($new_year);
+        }
     }
 }
 
-$movie1 = new Production ('La Febbra','Italiano',10);
+$movie1 = new Production ('La Febbra','Italiano', 10, new Genre ('Thriller',2004) );
 var_dump($movie1);
-$movie2 = new Production ('Il vecchio Conio', 'Italiano', 9);
+$movie2 = new Production ('Avatar 2', 'Inglese', 8, new Genre ('Fantascienza',2022));
 var_dump($movie2);
 
 ?>
