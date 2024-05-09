@@ -1,3 +1,15 @@
+<!-- PHP -->
+<?php
+class Production{
+    public $title;
+    public $language;
+    public $rate;
+
+   
+}
+?>
+
+<!-- HTML -->
 <!DOCTYPE html>
     <html lang="en">
     <head>
