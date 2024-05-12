@@ -9,7 +9,11 @@ class Production{
     //COSTRUTTORE
     function __construct(string $_title, string $_language, int $_rate, Genre $_genre) {
         $this -> setTitle($_title);
-        $this -> setLanguage($_language);
+        if($_language !== ''){
+            $this -> setLanguage($_language);
+        } else {
+            $this-> language = 'Nessuna lingua';
+        }
         $this -> setRate($_rate);
         $this -> genre = $_genre;
     }
