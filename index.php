@@ -3,18 +3,6 @@
 
 require_once __DIR__ . '/db.php';
 
-//I FILM VENGONO CREATI DIRETTAMENTE DENTRO UN ARRAY
-$movies = array(
-    new Production ('La Febbra','Italiano', 10, new Genre ('Drammatico',2004)),
-    new Production ('Avatar 2', 'Inglese', 8, new Genre ('Fantascienza',2022)),
-    new Production ('Dunkirk', 'Inglese', 9, new Genre ('Drammatico',2017)),
-    new Production ('Il ragazzo e l\'airone', 'Giapponese', 8, new Genre ('Fantastico',2023)),
-    new Production ('Good Bye, Lenin!', 'Tedesco', 8, new Genre ('Drammatico',2003)),
-    new Production ('Il mio amico Robot', 'Muto', 7, new Genre ('Musical',2023)),
-    new Production ('Civil War', 'Inglese', 7, new Genre ('Drammatico',2024)),
-    new Production ('Mobbasta veramente però', 'Italiano', 10, new Genre ('Drammatico',2004)),
-    new Production ('Grazie Ragazzi', 'Italiano', 7, new Genre ('Commedia',2023)),
-);
 
 ?>
 
@@ -46,19 +34,27 @@ $movies = array(
                                     <ul class="list-unstyled">
                                         <li>
                                             <span class="fw-bold">Lingua: </span> 
-                                            <?php echo $movie->language?>
+                                            <span><?php echo $movie->language?></span>
                                         </li>
                                         <li>
                                             <span class="fw-bold">Voto: </span> 
-                                            <?php echo $movie->rate?>
+                                            <span><?php echo $movie->rate?></span>
                                         </li>
                                         <li>
                                             <span class="fw-bold">Genere: </span> 
-                                            <?php echo $movie->genre->name?>
+                                            <span><?php echo $movie->genre->name?></span>
                                         </li>
                                         <li>
                                             <span class="fw-bold">Anno: </span> 
-                                            <?php echo $movie->genre->year?>
+                                            <span><?php echo $movie->genre->year?></span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">Durata: </span> 
+                                            <span><?php echo $movie->length?> minuti</span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">Incassi: </span> 
+                                            <span><?php echo $movie->profits ?>€</span>
                                         </li>
                                     </ul>
                                 </div>
