@@ -36,7 +36,8 @@
 
 <style>
     footer{
-        background-color: lightgreen;
+        background-color: darkred;
+        color: white;
     }
 
     li{
