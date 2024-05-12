@@ -22,7 +22,9 @@ require_once __DIR__ . '/db.php';
         ?>
         <!-- MAIN -->
         <main class="py-4">
+            <!-- MOVIES -->
             <div class="container">
+                <h2 class="text-center my-2">I FILM</h2>
                 <div class="row row-cols-3">
                     <?php
                     foreach ($movies as $movie) {
@@ -33,7 +35,7 @@ require_once __DIR__ . '/db.php';
                                     <h5 class="text-center card-title"><?php echo $movie->title?></h5>
                                     <ul class="list-unstyled">
                                         <li>
-                                            <span class="fw-bold">Lingua: </span> 
+                                            <span class="fw-bold">Lingua originale: </span> 
                                             <span><?php echo $movie->language?></span>
                                         </li>
                                         <li>
@@ -55,6 +57,47 @@ require_once __DIR__ . '/db.php';
                                         <li>
                                             <span class="fw-bold">Incassi: </span> 
                                             <span><?php echo $movie->profits ?>€</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    };
+                    ?>
+                </div>
+            </div>
+            <!-- TVSERIES -->
+            <div class="container">
+                <h2 class="text-center my-4">LE SERIE</h2>
+                <div class="row row-cols-3">
+                    <?php
+                    foreach ($tvseries as $serie) {
+                        ?>
+                        <div class="col p-2">
+                            <div class="card" >
+                                <div class="card-body">
+                                    <h5 class="text-center card-title"><?php echo $serie->title?></h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <span class="fw-bold">Lingua originale: </span> 
+                                            <span><?php echo $serie->language?></span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">Voto: </span> 
+                                            <span><?php echo $serie->rate?></span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">Genere: </span> 
+                                            <span><?php echo $serie->genre->name?></span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">Anno: </span> 
+                                            <span><?php echo $serie->genre->year?></span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">Stagioni: </span> 
+                                            <span><?php echo $serie->seasons?></span>
                                         </li>
                                     </ul>
                                 </div>
