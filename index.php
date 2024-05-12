@@ -1,7 +1,7 @@
 <!-- PHP -->
 <?php
 
-
+require_once __DIR__ . '/db.php';
 
 //I FILM VENGONO CREATI DIRETTAMENTE DENTRO UN ARRAY
 $movies = array(
