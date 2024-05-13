@@ -47,8 +47,8 @@ require_once __DIR__ . '/db.php';
                                             <span><?php echo $movie->genre->name?></span>
                                         </li>
                                         <li>
-                                            <span class="fw-bold">Anno: </span> 
-                                            <span><?php echo $movie->genre->year?></span>
+                                            <span class="fw-bold">Età minima : </span> 
+                                            <span><?php echo $movie->genre->min_age?>+</span>
                                         </li>
                                         <li>
                                             <span class="fw-bold">Durata: </span> 
@@ -92,8 +92,8 @@ require_once __DIR__ . '/db.php';
                                             <span><?php echo $serie->genre->name?></span>
                                         </li>
                                         <li>
-                                            <span class="fw-bold">Anno: </span> 
-                                            <span><?php echo $serie->genre->year?></span>
+                                            <span class="fw-bold">Età minima : </span> 
+                                            <span><?php echo $serie->genre->min_age?>+</span>
                                         </li>
                                         <li>
                                             <span class="fw-bold">Stagioni: </span> 
