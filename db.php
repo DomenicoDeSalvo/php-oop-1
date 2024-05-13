@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . '/models/movie.php';
-require_once __DIR__ . '/models/tvserie.php';
+require_once __DIR__ . '/models/Movie.php';
+require_once __DIR__ . '/models/Tvserie.php';
 
 //ARRAY FILM
 $movies = array(

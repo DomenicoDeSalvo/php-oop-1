@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/production.php';
+require_once __DIR__ . '/Production.php';
 
 //CLASSE MOVIE
 class Movie extends Production {
